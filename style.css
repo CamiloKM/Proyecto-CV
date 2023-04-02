@@ -1,0 +1,109 @@
+*{
+    box-sizing: content-box;
+    font-family: sans-serif;
+}
+
+main{
+    max-width: 1350px;
+    /*Este margin centra el contenido*/
+    margin: 0 auto;
+}
+
+header{
+    /*Toda las clases padres tienen el grid para el contenedor*/
+    display: grid;
+    /*Espacio en fr (fraccion) en cuadricula*/
+    grid-template-columns: 1fr 3fr;
+    column-gap: 50px;
+    border: rgb(128, 206, 255) 3px solid;
+    margin: 0px 0px -12px 0px;
+}
+
+.foto-perfil img{
+    width: 287px;
+    border-radius: 10%;
+}
+
+.presentacion{
+    /*Flex en Columna*/
+    display: flex;
+    flex-direction: column;
+    /*justificamos y aliniamos al inicio*/
+    justify-content: left;
+    align-items: flex-start;
+}
+
+hr{
+    border-top: rgb(128, 206, 255) 3px solid;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: 1fr 2.75fr;
+    grid-template-rows: 250px 1500px 80px;
+    grid-template-areas: 
+        "main sidebar sidebar sidebar"
+        "main sidebar sidebar sidebar"
+        "main sidebar sidebar sidebar";
+    column-gap: 125px;
+    margin-top: -10px;
+    border-right: rgb(128, 206, 255) 3px solid;
+    border-top:  rgb(128, 206, 255) 3px solid;
+    border-bottom:  rgb(128, 206, 255) 3px solid;
+}
+
+.info-gen{
+    grid-area: sidebar;
+    text-align: left;
+    margin-left: -80px;
+}
+
+.info-gen h2{
+    font-size: 33px;
+}
+
+li{
+    padding: 10px 0px 10px 0px;
+}
+
+.info-contact{
+    grid-area: main;
+    border-left:  rgb(128, 206, 255) 3px solid;
+    border-right:  rgb(128, 206, 255) 3px dashed;
+    padding-left: 30px;
+    padding-right: 40px;
+}
+
+.info-contact h2{
+    display: grid;
+    font-size: 30px;
+    place-items: center;
+}
+
+.email h3{
+    display: grid;
+    place-items: center;
+}
+.tel h3{
+    display: grid;
+    place-content: center;
+}
+
+.celular{
+    display: grid;
+    justify-items:center;
+}
+
+.direccion{
+    text-align: center;
+}
+
+.cumpleaños{
+    text-align: center;
+}
+
+.idiomas{
+    display: grid;
+    place-items: center;
+    margin: 12px 0px 0px -2px;
+}
